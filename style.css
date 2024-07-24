@@ -1,0 +1,165 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap");
+
+:root {
+  --primary-color: hsl(225, 100%, 94%);
+  --secondary-color: hsl(245, 75%, 52%);
+  --neutral-color1: hsl(225, 100%, 98%);
+  --neutral-color2: hsl(224, 23%, 55%);
+  --neutral-color3: hsl(223, 47%, 23%);
+}
+
+* {
+  font-family: "Red Hat Display";
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--primary-color);
+}
+
+.container {
+  height: 100vh;
+  width: 100%;
+  background-image: url("./images/pattern-background-mobile.svg");
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  height: 80vh;
+  width: 40vh;
+  border-radius: 15px;
+  box-sizing: border-box;
+  background-color: white;
+}
+
+.card-image img {
+  width: 100%;
+  height: 20vh;
+  border-radius: 15px 15px 0 0;
+}
+
+.card-body {
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.card-body .title h3 {
+  color: var(--neutral-color3);
+}
+
+.card-body .paragraph {
+  text-align: center;
+  font-weight: 500;
+  width: 17rem;
+}
+
+.card-body .plan {
+  width: 15rem;
+  background-color: var(--neutral-color1);
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.plan picture {
+  width: 10rem;
+  display: flex;
+  justify-content: space-around;
+}
+
+.change {
+  color: var(--secondary-color);
+  font-weight: 700;
+}
+.change:hover {
+  opacity: 0.5;
+}
+
+button {
+  background-color: var(--secondary-color);
+  color: white;
+  font-weight: 700;
+  padding: 15px;
+  border: none;
+  border-radius: 10px;
+  width: 17rem;
+  box-shadow: 0 10px 30px var(--secondary-color);
+}
+
+button:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.cancel a {
+  text-decoration: none;
+  color: var(--neutral-color2);
+  font-weight: 900;
+}
+
+.cancel a:hover {
+  color: var(--neutral-color3);
+}
+
+@media (width > 375px) and (width <= 1440px) {
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  .container {
+    height: 100vh;
+    background-image: url("./images/pattern-background-desktop.svg");
+    background-repeat: no-repeat;
+  }
+
+  .card {
+    width: 50vh;
+    height: 75vh;
+  }
+
+  .card-image img {
+    height: 25vh;
+  }
+
+  .card-body {
+    height: 50vh;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  .card-body .paragraph {
+    width: 20rem;
+    line-height: 1.5;
+  }
+
+  .card-body .plan {
+    width: 18rem;
+  }
+
+  button {
+    width: 20rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+}
+
+.fw-900 {
+  font-weight: 900;
+}
+
+.color-neutral2 {
+  color: var(--neutral-color2);
+}
